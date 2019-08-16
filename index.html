@@ -1,1 +1,74 @@
-"Hello World"
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1;">
+    <meta name="theme-color" content="#000000">
+    <title>
+      Luiz Chaves
+    </title>
+    <link rel='stylesheet' href='styles.css'>
+    <link href="https://fonts.googleapis.com/css?Roboto&display=swap"
+      rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div class='fp'>
+      <img src='./img/logo.png'/>
+      <p class='fpText'>
+        <span class='name'>Luiz Chaves</span><br>
+        <span class='area'>Front-end</span><br> 
+        <span class='enterprise'>developer at <span class='enterpriseStyleName'>Byte<span class='enterpriseStyleLastName'>me</span></span></span><br>
+      </p>
+      <button class='fpButton'>About</button>
+    </div>
+    <div id='about'>
+      <p class='aboutTitle'>Sobre mim</p>
+      <div class='section'>
+        <p class='aboutSubTitle'>Formação</p>
+        <div class='aboutdiv' open='ETEFEV'>
+          <img src='./img/etefev.png' alt='Ferreira Viana'/>
+          <p>
+            <span class='time'>2014-2017</span><br>
+            <span class='highlight'>Técnico em Eletrotécnica</span>
+            pela
+            <span class='highlight'>FAETEC Ferreira Viana</span>
+            <span class='highlightLink etefev'>Saiba mais</span>
+          </p>
+        </div>
+        <div class='aboutdiv'>
+          <img  src='./img/unicarioca.jpg' alt='UniCarioca'/>
+          <p>
+            <span class='time'>2018-2021 (previsto)</span><br>
+            <span class='highlight'>Ciência da computação</span>
+            pelo
+            <span class='highlight'>Centro Universitário Carioca</span>
+          </p>
+        </div>
+      </div>
+      <div class='section'>
+          <p class='aboutSubTitle'>Experiência</p>
+          <div class='aboutdiv'>
+              <img  src='./img/byteme.png' alt='byteme'/>
+              <p>
+                <span class='time'>2019-atual</span><br>
+                Desenvolvedor<span class='highlight'> Front-End </span>
+                na <span class='highlight'> Byteme</span>
+              </p>
+            </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    $(document).ready(function () {
+      //smooth transiction for initial button
+      $('.fpButton').click(function(){
+        document.querySelector('#about').scrollIntoView({
+            behavior: 'smooth'
+        });
+      })
+    })
+  </script>
+
+</html>
