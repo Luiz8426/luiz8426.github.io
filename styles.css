@@ -56,3 +56,8 @@ img {
     grid-template-columns: auto;
   }
 }
+@media (min-width: 1000px) {
+  body {
+    background-size: cover;
+  }
+}
