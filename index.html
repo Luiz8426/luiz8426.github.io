@@ -1,20 +1,120 @@
 <!DOCTYPE html>
 <html>
-
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1;">
-    <meta name="theme-color" content="#000000">
+    <meta name="viewport" content="width=device-width, initial-scale=1;" />
+    <meta name="theme-color" content="#000000" />
     <title>
-      Luiz Chaves!
+      Luiz Chaves
     </title>
-    <link rel='stylesheet' href='styles.css'>
-    <link href="https://fonts.googleapis.com/css?Roboto&display=swap"
-      rel="stylesheet">
+    <link rel="stylesheet" target="_blank" href="styles.css" />
+    <link rel="stylesheet" target="_blank" href="home.css" />
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
 
   <body>
-    Estou refazendo
+    <div class="content">
+      <div id="content-home" class="row">
+        <h1>Luiz Chaves</h1>
+        <a target="_blank" href="#habilidades" class="btn-prim">Habilidades</a>
+        <a target="_blank" href="#projetos" class="btn-prim">Projetos</a>
+        <a target="_blank" href="#contatos" class="btn-prim">Contatos</a>
+        <a target="_blank" href="curriculo.pdf" class="btn-prim"
+          >Baixar currículo</a
+        >
+      </div>
+
+      <div id="habilidades" class="content-row">
+        <h2>Habilidades</h2>
+        <div class="grid-container">
+          <div class="grid-item">
+            <h3>FrontEnd</h3>
+            <p>
+              React.js, jQuery, HTML, CSS
+            </p>
+          </div>
+          <div class="grid-item">
+            <h3>Mobile</h3>
+            <p>React Native</p>
+          </div>
+          <div class="grid-item">
+            <h3>BackEnd</h3>
+            <p>Node.js</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="projetos" class="content-row">
+        <center><h2>Projetos</h2></center>
+        <div class="grid-container">
+          <div class="grid-item rounded">
+            <div class="img-grid">
+              <img
+                src="https://scontent-gig2-1.cdninstagram.com/vp/94fa04d72c8b9e7b315042d1231cf100/5E4E3BE0/t51.2885-19/s150x150/73385840_987106071627413_7400980785680875520_n.jpg?_nc_ht=scontent-gig2-1.cdninstagram.com"
+              />
+            </div>
+
+            <p class="project-name">SPOT</p>
+            <p>Cofundador</p>
+          </div>
+          <div class="grid-item">
+            <div class="img-grid rounded">
+              <img src="./img/aigree_logo.PNG" />
+            </div>
+
+            <p class="project-name">Aigree</p>
+            <p>Desenvolvedor pela Byteme</p>
+          </div>
+          <div class="grid-item ">
+            <div class="img-grid ">
+              <img src="./img/fidelizapp_logo.png" />
+            </div>
+
+            <p class="project-name">Fideliz.app</p>
+            <p>Desenvolvedor pela Byteme</p>
+          </div>
+        </div>
+      </div>
+      <div id="contatos" class="content-row">
+        <h2>Contatos</h2>
+        <div id="contact-list">
+          <a target="_blank" href="https://www.linkedin.com/in/luiz-chaves/"
+            ><img src="img/linkedin_logo.svg"
+          /></a>
+          <a target="_blank" href="https://github.com/LuizFChaves"
+            ><img src="img/github_logo.svg"
+          /></a>
+          <a target="_blank" href="https://t.me/luiz8426"
+            ><img src="img/telegram_logo.svg"
+          /></a>
+          <a
+            target="_blank"
+            href="https://api.whatsapp.com/send?phone=55$21988705275&&text="
+            ><img src="img/whatsapp_logo.svg"
+          /></a>
+          <a target="_blank" href="https://steamcommunity.com/id/tdonan/"
+            ><img src="img/steam_logo.svg"
+          /></a>
+        </div>
+      </div>
+      <div id="curriculo" class="content-row">
+        <h2>Currículo</h2>
+        <a class="btn-prim" target="_blank" href="curriculo.pdf"
+          >Baixar currículo</a
+        >
+      </div>
+    </div>
   </body>
-  
+  <script>
+    $(document).on("click", 'a[href^="#"]', function(event) {
+      event.preventDefault();
+
+      $("html, body").animate(
+        {
+          scrollTop: $($.attr(this, "href")).offset().top
+        },
+        500
+      );
+    });
+  </script>
 </html>
