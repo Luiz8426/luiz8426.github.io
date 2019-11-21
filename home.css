@@ -51,6 +51,9 @@
   justify-content: space-around;
   padding: 20px;
 }
+#curriculo {
+  margin-bottom: 20px;
+}
 #curriculo a {
   max-width: 50%;
 }
