@@ -39,6 +39,7 @@ p {
   margin: 50px 0;
 }
 .projeto .image {
+  transition: 0.6s;
   grid-area: image;
   max-width: 10vw;
 }
@@ -127,6 +128,11 @@ section .text {
   section {
     padding: 7vh 5vw 3vh;
   }
+
+  .projeto:hover .image {
+    transform: translateX(30vw) scale(1.2);
+    opacity: 0.4;
+  }
 }
 
 @media (max-width: 720px) {
@@ -171,6 +177,7 @@ section .text {
     width: 100%;
     max-width: 100%;
   }
+
   .projeto .image img {
     height: 100%;
     width: auto;
