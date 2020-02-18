@@ -98,7 +98,6 @@ p {
   background-color: #444444;
 }
 section {
-  padding: 7vh 5vw 7vh;
   min-height: 93vh;
 }
 section .title {
@@ -119,16 +118,23 @@ section .text {
   padding-bottom: 0.5rem;
 }
 
-@media (min-width: 719px) {
+@media (min-width: 721px) {
   .header {
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
   }
+  section {
+    padding: 7vh 5vw 3vh;
+  }
 }
 
 @media (max-width: 720px) {
+  section {
+    padding: 3vh 5vw 7vh;
+  }
   .header {
+    height: 56px;
     position: fixed;
     bottom: 0;
     padding: 0;
@@ -137,15 +143,16 @@ section .text {
     display: none;
   }
   .header ul {
+    height: 56px;
     display: flex;
     justify-content: space-between;
     width: 90vw;
   }
   .header ul li a {
-    padding: 10px 5px;
+    padding: 16px 5px;
+    height: 24px;
   }
   .header ul li a:hover {
-    padding-top: 7px;
     color: #444444;
     background-color: #f9f4ed;
     text-decoration: underline;
