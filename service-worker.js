@@ -1,4 +1,5 @@
 const cacheName = "v1";
+const cacheOfflineURL = "index.html";
 const cacheAssets = [
   "index.html",
   "styles.css",
@@ -8,7 +9,6 @@ const cacheAssets = [
   "/image/spot_logo.jpg",
   "/image/pingui_logo.png"
 ];
-
 // Call Install Event
 self.addEventListener("install", e => {
   e.waitUntil(
@@ -41,5 +41,5 @@ self.addEventListener("activate", e => {
 
 //Call fetch Event
 self.addEventListener("fetch", e => {
-  e.respondWith(fetch(e.request).catch(() => caches.match(e.request)));
+  e.respondWith(fetch(e.request).catch(() => caches.match(cacheOfflineURL)));
 });
