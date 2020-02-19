@@ -1,8 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Luiz Chaves</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f9f4ed" />
+    <meta name="description" content="Site pessoal de Luiz Chaves" />
+
+    <link rel="manifest" href="manifest.json" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
@@ -14,7 +19,11 @@
     <div class="banner active">
       <p class="title">Luiz Chaves</p>
       <div class="contatos">
-        <a target="_blank" href="https://www.linkedin.com/in/luiz-chaves/">
+        <a
+          rel="external"
+          target="_blank"
+          href="https://www.linkedin.com/in/luiz-chaves/"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -28,6 +37,7 @@
         </a>
 
         <a
+          rel="external"
           target="_blank"
           href="https://api.whatsapp.com/send?phone=5521988705275&text=Olá%20Luiz!"
         >
@@ -43,7 +53,7 @@
           </svg>
         </a>
 
-        <a target="_blank" href="https://github.com/LuizFChaves">
+        <a rel="external" target="_blank" href="https://github.com/LuizFChaves">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -55,7 +65,7 @@
             />
           </svg>
         </a>
-        <a href="mailto:lf1405@hotmail.com">
+        <a rel="external" href="mailto:lf1405@hotmail.com">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -164,8 +174,6 @@
     </section>
 
     <script>
-      let vh = window.innerHeight * 0.01;
-
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener("click", function(e) {
           e.preventDefault();
@@ -175,6 +183,9 @@
           });
         });
       });
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("service-worker.js");
+      }
     </script>
   </body>
 </html>
